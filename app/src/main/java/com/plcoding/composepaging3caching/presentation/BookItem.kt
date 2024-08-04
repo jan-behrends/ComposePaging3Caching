@@ -1,4 +1,4 @@
-package com.plcoding.composepaging3caching.Presentation
+package com.plcoding.composepaging3caching.presentation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

@@ -9,7 +9,7 @@ interface BookApi {
     suspend fun getBooks(
         @Query("page") page: Int,
         @Query("per_page") pageCount: Int
-    ): List<BookDto>
+    ): BookResponse
 
     companion object{
         const val BASE_URL = "http://10.0.2.2:80/api/"

@@ -1,5 +1,6 @@
 package com.plcoding.composepaging3caching.data.remote
 
+import android.util.Log
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
@@ -37,11 +38,12 @@ class BookRemoteMediator(
                     }
                 }
             }
+            Log.d("Load key", loadKey.toString())
             delay(2000L)
             val books = bookApi.getBooks(
                 page = loadKey,
                 pageCount =  state.config.pageSize
-            )
+            ).data
 
             bookDB.withTransaction {
                 if(loadType == LoadType.REFRESH){

@@ -1,4 +1,4 @@
-package com.plcoding.composepaging3caching.Presentation
+package com.plcoding.composepaging3caching.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -21,4 +21,5 @@ class BookViewModel @Inject constructor(
             it.toBook()
         }
     }.cachedIn(viewModelScope)
+
 }
